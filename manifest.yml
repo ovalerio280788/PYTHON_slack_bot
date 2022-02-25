@@ -1,0 +1,57 @@
+_metadata:
+  major_version: 1
+  minor_version: 1
+display_information:
+  name: QAPracticeBot
+features:
+  app_home:
+    home_tab_enabled: true
+    messages_tab_enabled: false
+    messages_tab_read_only_enabled: true
+  bot_user:
+    display_name: QAPracticeBot
+    always_online: true
+  slash_commands:
+    - command: /qa_sos
+      url: https://3eb7-179-50-188-104.ngrok.io/slack/events
+      description: Sos command to ask for help on anything related with QA from the QA Practice.
+      usage_hint: /qa_sos js "Brief summary of your question"
+      should_escape: false
+oauth_config:
+  scopes:
+    user:
+      - channels:history
+      - channels:read
+      - channels:write
+      - groups:read
+      - users:read
+      - users:read.email
+      - chat:write
+      - groups:write
+      - mpim:write
+      - im:write
+    bot:
+      - commands
+      - channels:history
+      - channels:read
+      - channels:manage
+      - conversations.connect:write
+      - groups:read
+      - groups:write
+      - mpim:write
+      - im:write
+      - users:read
+      - users:read.email
+      - chat:write
+      - chat:write.public
+settings:
+  event_subscriptions:
+    request_url: https://3eb7-179-50-188-104.ngrok.io/slack/events
+    bot_events:
+      - app_home_opened
+  interactivity:
+    is_enabled: true
+    request_url: https://3eb7-179-50-188-104.ngrok.io/slack/message_action
+  org_deploy_enabled: false
+  socket_mode_enabled: false
+  token_rotation_enabled: false

@@ -1,1 +1,4 @@
-# PYTHON_slack_bot
+# qa-slack-bot
+## Bot for the QA practice
+
+- Documentation still in progress!!
